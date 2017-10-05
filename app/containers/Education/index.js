@@ -1,9 +1,3 @@
-/*
- * Education
- *
- * This is the first thing users see of our App, at the '/' route
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -41,9 +35,7 @@ export class Education extends React.PureComponent {
           <H2>Education</H2>
           <ListItemParent>
             {educations &&
-              educations.map((item) =>
-                <List key={item.id} {...item} />
-              )}
+              educations.map((item) => <List key={item.id} {...item} />)}
           </ListItemParent>
         </PageContainer>
       </article>

@@ -1,11 +1,3 @@
-/**
- *
- * App
- *
- * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. (e.g. navigation bar)
- */
-
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
@@ -37,10 +29,8 @@ export function App(props) {
         defaultTitle="Frontend Developer"
         meta={[{ name: 'description', content: 'Frontend Developer, Nepal' }]}
       />
-      <Header />
-      <Content>
-        {React.Children.toArray(props.children)}
-      </Content>
+      <Header location={props.location} />
+      <Content>{React.Children.toArray(props.children)}</Content>
       <CallToAction>
         <ContainerWrapper>
           <H2>
@@ -58,6 +48,7 @@ export function App(props) {
 
 App.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default withProgressBar(App);

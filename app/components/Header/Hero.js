@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import TextLoop from 'react-text-loop';
@@ -106,6 +107,8 @@ const HireMeButton = styled(A)`
   }
 `;
 
+const ContactButtonHeader = styled(CallToActionButton)`padding: 8px 50px;`;
+
 // eslint-disable-next-line react/prefer-stateless-function
 class Hero extends Component {
   render() {
@@ -154,9 +157,9 @@ class Hero extends Component {
             </TextLoop>
           </DescriptionCard>
           <ButtonGroup>
-            <CallToActionButton medium to="/contact">
+            <ContactButtonHeader to="/contact">
               <FormattedMessage {...messages.CallToActionButtonHeader} />
-            </CallToActionButton>
+            </ContactButtonHeader>
             <HireMeButton
               medium
               background="#fff"
